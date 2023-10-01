@@ -25,25 +25,25 @@ const MainSection = () => {
 
   return (
     <>
-      <div class="container mb-3 mx-5 my-4">
+      <div className="mx-5 my-4">
         <label for="exampleFormControlTextarea1" class="form-label">
           Enter Your Text : 
         </label>
         <textarea
         value={text}
-        class="form-control"
+        className="form-control"
         id="exampleFormControlTextarea1"
         rows="3"
         placeholder="write something...."
         onChange={handleOnChange}
         ></textarea>
 
-        <button className="btn btn-primary my-3" onClick={handleUpClick}>UpperCase</button>
-        <button className="btn btn-primary my-3 mx-2" onClick={handleLoClick}>LowerCase</button>
-        <button className="btn btn-primary my-3 " onClick={handleClearClick}>Clear Text</button>
+        <button className="btn btn-primary my-2" onClick={handleUpClick}>UpperCase</button>
+        <button className="btn btn-primary mx-2 my-2" onClick={handleLoClick}>LowerCase</button>
+        <button className="btn btn-primary " onClick={handleClearClick}>Clear Text</button>
 
       </div>
-      <div className="container">
+      <div className="mx-5">
         <h4>Text Summary: </h4>
         <p>{text.split(" ").length} words and {text.length} characters </p>
         <p>{0.008 * text.split(" ").length} Minutes to read document..</p>
